@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quieres salir conmigo? | Thezero</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.p1').hover(function () {
+                arriba = Math.random() * (200 - 1) + 1;//400
+                abajo = Math.random() * (300 - 1) + 1;//609
+                $(this).css('top', arriba);
+                $(this).css('left', abajo);
+            });
+        });
+        function dijoSi() {
+            valor = document.getElementById('entrada').value;
+            document.getElementById('nombre').innerHTML = ' ' + valor;
+            $("#ingr").html("<input id='entrada' onkeyup='escribir2()'>")
+            $("#txs").html("<h2 class='XD'>Hermosa mujer podría escribir su bello nombre</h2>")
+
+            document.getElementById('si').style.display = 'block';
+            //$("#nombre").html("<span>Hermosa Mujer</span>")
+        }
+    </script>
+</head>
+
+<body>
+    <!--div class="contenedor">
+        <div class="titulo">
+            <h1>¿Quieres salir conmigo?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">No</p>
+            <p onclick="dijoSi()" class="p2">Si</p>
+            <div id="si">
+                <h2>Gracias Shayla, lo sabía. te esepera a las 5 en la plaza :3</h2> 
+            </div>
+        </div>
+    </div-->
+    <div>
+        <div class="titulo">
+            <center>
+                <h1 class="salir">¿Quieres salir conmigo?</h1>
+            </center>
+        </div>
+        <div class="opciones"><!--OPCIONES-->
+            <p class="p1">No</p>
+            <center>
+                <p onclick="dijoSi()" class="p2">Si</p>
+            </center>
+            <div id="si">
+                <h2>Gracias <a id="nombre"><span></span></a>, lo sabía. te espero a las 5 en la plaza :3</h2>
+            </div>
+        </div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></b><br><br><hr><br><br><br>
+    <div class="forml">
+        <center><a id="ingr"><input type="hidden" id="entrada" onkeyup="escribir2()"></a></center>
+        <a id="txs"><h2 class="XD"></h2></a>
+        <script>
+            function escribir2() {
+                valor = document.getElementById('entrada').value;
+                document.getElementById('nombre').innerHTML = ' ' + valor;
+            } 
+        </script>
+    </div>
+    <footer>
+        Autor: Thezero
+    </footer>
+</body>
+
+</html>

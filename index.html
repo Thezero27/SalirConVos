@@ -12,6 +12,7 @@
     <script>
         $(document).ready(function () {
             $('.p1').hover(function () {
+                window.navigator.vibrate([200]);
                 arriba = Math.random() * (200 - 1) + 1;//400
                 abajo = Math.random() * (300 - 1) + 1;//609
                 $(this).css('top', arriba);
@@ -19,6 +20,7 @@
             });
         });
         function dijoSi() {
+            window.navigator.vibrate([3000]);
             valor = document.getElementById('entrada').value;
             document.getElementById('nombre').innerHTML = ' ' + valor;
             $("#ingr").html("<input id='entrada' onkeyup='escribir2()'>")
@@ -70,6 +72,7 @@
                 document.getElementById('nombre').innerHTML = ' ' + valor;
             } 
         </script>
+        
     </div>
     <footer>
         Autor: Thezero

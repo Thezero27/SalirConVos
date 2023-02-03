@@ -22,8 +22,9 @@
         function dijoSi() {
             window.navigator.vibrate([3000]);
             valor = document.getElementById('entrada').value;
+            //valor[0].toUpperCase() + valor.substring(1);
             document.getElementById('nombre').innerHTML = ' ' + valor;
-            $("#ingr").html("<input id='entrada' onkeyup='escribir2()'>")
+            $("#ingr").html("<input id='entrada' onkeyup='escribir2()' placeholder='Escribe Aqui'>")
             $("#txs").html("<h2 class='XD'>Hermosa mujer podría escribir su bello nombre</h2>")
 
             document.getElementById('si').style.display = 'block';
@@ -64,7 +65,7 @@
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></b><br><br><hr><br><br><br>
     <div class="forml">
-        <center><a id="ingr"><input type="hidden" id="entrada" onkeyup="escribir2()"></a></center>
+        <center><a id="ingr"><input type="hidden" id="entrada" onkeyup="escribir2()" placeholder="Escribe Aqui"></a></center>
         <a id="txs"><h2 class="XD"></h2></a>
         <script>
             function escribir2() {
@@ -75,7 +76,7 @@
         
     </div>
     <footer>
-        Autor: Thezero
+        <b>Autor:</b> Thezero - Fabián
     </footer>
 </body>
 
